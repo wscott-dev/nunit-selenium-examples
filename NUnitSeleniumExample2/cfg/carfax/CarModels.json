@@ -1,0 +1,39 @@
+{
+  "Chevrolet": {
+    "Models": [
+      {
+        "Name": "Silverado 1500"
+      },
+      {
+        "Name": "Camaro"
+      }
+    ]
+  },
+  "Dodge": {
+    "Models": [
+      {
+        "Name": "Ram 1500"
+      },
+      {
+        "Name": "Charger"
+      }
+    ]
+  },
+  "Ford": {
+    "Models": [
+      {
+        "Name": "F-150"
+      },
+      {
+        "Name": "Mustang"
+      }
+    ]
+  },
+  "Toyota": {
+    "Models": [
+      {
+        "Name": "RAV4"
+      }
+    ]
+  }
+}

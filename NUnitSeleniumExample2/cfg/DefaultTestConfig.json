@@ -1,0 +1,10 @@
+{
+  "CARFAX Chrome Config": {
+    "ConfigDir": "carfax",
+    "URL": "https://www.carfax.com/",
+    "PageTimeoutSeconds": 30,
+    "ElementTimeoutSeconds": 10,
+    "DelayMillis": 125,
+    "BrowserName": "Chrome"
+  }
+}
