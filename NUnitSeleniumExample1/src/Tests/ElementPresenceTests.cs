@@ -47,7 +47,7 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
                     WebDriver.Navigate().GoToUrl(Args.AppURL);
                 }
 
-                Common.SeleniumTestUtils.WaitForPageToLoad(WebDriver, Args.PageTimeout);
+                SeleniumTestUtils.WaitForPageToLoad(WebDriver, Args.PageTimeout);
 
                 string menuXPath = "//*[@class='cgh-link-tag' and descendant-or-self::text()[normalize-space(.)='" +
                     menuName + "']]";
@@ -59,7 +59,7 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
                 Actions actions = new Actions(WebDriver);
                 actions.MoveToElement(menu).Perform();
 
-                Common.SeleniumTestUtils.HighlightElement(WebDriver, menu);
+                SeleniumTestUtils.HighlightElement(WebDriver, menu);
 
                 if (Args.DelayMillis > 0)
                 {
@@ -93,7 +93,7 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
                     WebDriver.Navigate().GoToUrl(Args.AppURL);
                 }
 
-                Common.SeleniumTestUtils.WaitForPageToLoad(WebDriver, Args.PageTimeout);
+                SeleniumTestUtils.WaitForPageToLoad(WebDriver, Args.PageTimeout);
 
                 string menuXPath = "//*[@class='cgh-link-tag' and descendant-or-self::text()[normalize-space(.)='" +
                     menuName + "']]";
@@ -121,7 +121,7 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
                 Actions actions = new Actions(WebDriver);
                 actions.MoveToElement(subMenu).Perform();
 
-                Common.SeleniumTestUtils.HighlightElement(WebDriver, subMenu);
+                SeleniumTestUtils.HighlightElement(WebDriver, subMenu);
 
                 if (Args.DelayMillis > 0)
                 {
