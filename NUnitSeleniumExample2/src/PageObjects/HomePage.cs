@@ -22,14 +22,6 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         [FindsBy(How = How.XPath,
             Using = "//*[@class='cgh-link-tag' and descendant-or-self::text()[normalize-space(.)='Used Cars for Sale']]")]
         private readonly IWebElement usedCarsForSaleMenu;
-
-        [FindsBy(How = How.XPath,
-            Using = "//*[@class='cgh-link-tag' and descendant-or-self::text()[normalize-space(.)='CARFAX Reports']]")]
-        private readonly IWebElement CARFAXReportsMenu;
-
-        [FindsBy(How = How.XPath,
-            Using = "//*[@class='cgh-link-tag' and descendant-or-self::text()[normalize-space(.)='My Car Maintenance']]")]
-        private readonly IWebElement myCarMaintenanceMenu;
 #pragma warning restore 0649
 
         public HomePage(IWebDriver driver, string baseUrl, TimeSpan pageTimeout, TimeSpan elementTimeout) :

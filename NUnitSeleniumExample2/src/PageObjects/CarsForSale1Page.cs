@@ -26,8 +26,6 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         private readonly IWebElement modelSelector;
         [FindsBy(How = How.XPath, Using = "//input[@name='zip']")]
         private readonly IWebElement zipCodeInput;
-        [FindsBy(How = How.XPath, Using = "//input[@type='checkbox' and @name='cpo']")]
-        private readonly IWebElement certifiedCBox;
         [FindsBy(How = How.XPath, Using = "//button[descendant-or-self::text()[normalize-space(.)='Next']]")]
         private readonly IWebElement nextButton;
 #pragma warning restore 0649

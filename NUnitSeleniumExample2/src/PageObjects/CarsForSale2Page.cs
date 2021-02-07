@@ -20,9 +20,6 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         // Suppress 'field never assigned a value' warnings.
 #pragma warning disable 0649
         [FindsBy(How = How.XPath,
-            Using = "//span[descendant-or-self::text()[normalize-space(.)='No Accidents or Damage Reported']]")]
-        private readonly IWebElement noAccidentsCBox;
-        [FindsBy(How = How.XPath,
             Using = "//button[descendant-or-self::text()[normalize-space(.)='Show Me']]")]
         private readonly IWebElement showMeButton;
 #pragma warning restore 0649
