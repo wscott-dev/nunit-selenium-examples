@@ -5,12 +5,12 @@ using System.IO;
 using System.Text;
 using WS.Examples.Tests.Common;
 
-/// <summary>
-/// Common Selenium test classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Common Selenium test classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.Common
 {
     /// <summary>
@@ -130,6 +130,10 @@ namespace WS.Examples.Tests.Selenium.Common
         private SeleniumTestArgs args;
         private IWebDriver driver;
 
+        /// <summary>
+        /// Initialize the Selenium test fixture by loading the test configuration
+        /// and creating a connection to the specified Web driver type.
+        /// </summary>
         public void Initialize()
         {
             /*
@@ -152,6 +156,9 @@ namespace WS.Examples.Tests.Selenium.Common
             }
         }
 
+        /// <summary>
+        /// Dispose of the Selenium test fixture and associated Web driver.
+        /// </summary>
         public void Dispose()
         {
             if (driver != null)
@@ -161,7 +168,14 @@ namespace WS.Examples.Tests.Selenium.Common
             }
         }
 
+        /// <summary>
+        /// Get/Set Selenium test fixture arguments.
+        /// </summary>
         public SeleniumTestArgs Args { get => args; set => args = value; }
+
+        /// <summary>
+        /// Get the Web driver associated with the Selenium test fixture.
+        /// </summary>
         public IWebDriver WebDriver { get => driver; }
     }
 
@@ -222,10 +236,19 @@ namespace WS.Examples.Tests.Selenium.Common
     [Serializable]
     public class WebDriverNotFoundException : TestException
     {
+        /// <summary>
+        /// Create an exception indicating that the Web driver executable was not found.
+        /// </summary>
+        /// <param name="message">
+        /// An exception message.
+        /// </param>
         public WebDriverNotFoundException(string message) : base(message)
         {
         }
 
+        /// <summary>
+        /// Get the exception message with a specialized prefix.
+        /// </summary>
         public override string Message
         {
             get
@@ -243,11 +266,23 @@ namespace WS.Examples.Tests.Selenium.Common
     {
         private readonly int count;
 
+        /// <summary>
+        /// Create an exception indicating that more than one Web element was matched.
+        /// </summary>
+        /// <param name="count">
+        /// The number of Web elements matched.
+        /// </param>
+        /// <param name="message">
+        /// An exception message.
+        /// </param>
         public MultipleElementsMatchedException(int count, string message) : base(message)
         {
             this.count = count;
         }
 
+        /// <summary>
+        /// Get the exception message with a specialized prefix.
+        /// </summary>
         public override string Message
         {
             get

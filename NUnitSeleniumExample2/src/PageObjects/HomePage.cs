@@ -4,12 +4,12 @@ using System;
 using WS.Examples.Tests.Common;
 using WS.Examples.Tests.Selenium.Common;
 
-/// <summary>
-/// Test page classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Test page classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.PageObjects
 {
     /// <summary>
@@ -24,11 +24,32 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         private readonly IWebElement usedCarsForSaleMenu;
 #pragma warning restore 0649
 
+        /// <summary>
+        /// Create a CARFAX home page object.
+        /// </summary>
+        /// <param name="driver">
+        /// Reference to a Selenium Web driver.
+        /// </param>
+        /// <param name="baseUrl">
+        /// The base URL of the Web application.
+        /// </param>
+        /// <param name="pageTimeout">
+        /// The maximum time to wait for the page to load.
+        /// </param>
+        /// <param name="elementTimeout">
+        /// The maximum time to wait for a page element to become available.
+        /// </param>
         public HomePage(IWebDriver driver, string baseUrl, TimeSpan pageTimeout, TimeSpan elementTimeout) :
             base(driver, baseUrl, pageTimeout, elementTimeout)
         {
         }
 
+        /// <summary>
+        /// Click on the 'Used Cars for Sale' menu item.
+        /// </summary>
+        /// <returns>
+        /// A reference to the initial 'Cars For Sale' page object.
+        /// </returns>
         public CarsForSale1Page ClickUsedCarsForSaleMenu()
         {
             SeleniumTestUtils.Click(driver, elementTimeout, usedCarsForSaleMenu);

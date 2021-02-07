@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-/// <summary>
-/// Test data source classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Test data source classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.DataSourceClasses
 {
     /// <summary>
@@ -16,7 +16,7 @@ namespace WS.Examples.Tests.Selenium.DataSourceClasses
         private List<CarModel> models;
 
         /// <summary>
-        /// List of input field names or values.
+        /// Get/set the list of car models.
         /// </summary>
         public List<CarModel> Models { get => models; set => models = value; }
     }
@@ -29,6 +29,7 @@ namespace WS.Examples.Tests.Selenium.DataSourceClasses
         private string name;
 
         /// <summary>
+        /// Get/set the car model name.
         /// </summary>
         public string Name { get => name; set => name = value; }
     }
@@ -41,7 +42,7 @@ namespace WS.Examples.Tests.Selenium.DataSourceClasses
         private List<ZipCode> zipCodes;
 
         /// <summary>
-        /// List of input field names or values.
+        /// Get/set the list of zip codes.
         /// </summary>
         public List<ZipCode> ZipCodes { get => zipCodes; set => zipCodes = value; }
     }
@@ -54,7 +55,14 @@ namespace WS.Examples.Tests.Selenium.DataSourceClasses
         private string city;
         private string state;
 
+        /// <summary>
+        /// Get/set a city name.
+        /// </summary>
         public string City { get => city; set => city = value; }
+
+        /// <summary>
+        /// Get/set a state name.
+        /// </summary>
         public string State { get => state; set => state = value; }
     }
 }

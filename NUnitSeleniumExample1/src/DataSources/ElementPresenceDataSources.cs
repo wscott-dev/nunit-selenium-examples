@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using WS.Examples.Tests.Selenium.Common;
 
-/// <summary>
-/// Element presence test data sources.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Element presence test data sources.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.ElementPresenceTests
 {
     /// <summary>
@@ -18,7 +18,7 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
     public partial class ElementPresenceTests
     {
         /// <summary>
-        /// Get toolbar menu test data from an external JSON file.
+        /// Get toolbar menu test data from external JSON files.
         /// </summary>
         public static IEnumerable<object[]> MenuElementTestData()
         {

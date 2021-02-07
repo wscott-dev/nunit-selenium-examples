@@ -10,12 +10,12 @@ using System.IO;
 using System.Text.RegularExpressions;
 using WS.Examples.Tests.Common;
 
-/// <summary>
-/// Common Selenium test utilities.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Common Selenium test utilities.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.Common
 {
     /// <summary>
@@ -143,7 +143,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for a Web page to load.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for page to load.
@@ -158,7 +158,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for the current URL to match the specified URL.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for the URL to match.
@@ -178,7 +178,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for the current URL to match to specified regular expression.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for the URL to contain the specified pattern.
@@ -196,7 +196,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for the specified Web element to become clickable.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for the specified element to become clickable.
@@ -214,12 +214,12 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for the specified Web element to come in to existence.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for the specified element to come in to existence.
         /// </param>
-        /// <param name="url">
+        /// <param name="locator">
         /// Reference to a Web element locator.
         /// </param>
         public static void WaitForPresenceOfElement(IWebDriver driver, TimeSpan timeout, By locator)
@@ -232,7 +232,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for element text to match the specified regular expression.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         ///  Maximum time to wait for the specified text to match.
@@ -254,7 +254,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Wait for the specified Web element to become clickable.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
         /// Maximum time to wait for the specified element to become clickable.
@@ -278,7 +278,7 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Highlight the border of the specified Web element for test demonstration purposes.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="element">
         /// Reference to the Web element to be highlighted.
@@ -292,16 +292,16 @@ namespace WS.Examples.Tests.Selenium.Common
 
         /// <summary>
         /// Determine if the given element text matches the specified regular expression.
-        /// Modeled on the <https://github.com/DotNetSeleniumTools/DotNetSeleniumExtras> library behavior,
+        /// Modeled on the https://github.com/DotNetSeleniumTools/DotNetSeleniumExtras library behavior,
         /// this library does not provide regex text matching capability.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="element">
         /// Reference to a Web element.
         /// </param>
-        /// <param name="text">
+        /// <param name="regex">
         /// The regular expression to match.
         /// </param>
         /// <returns>

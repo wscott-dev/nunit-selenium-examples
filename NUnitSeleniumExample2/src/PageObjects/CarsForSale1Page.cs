@@ -5,12 +5,12 @@ using System;
 using WS.Examples.Tests.Common;
 using WS.Examples.Tests.Selenium.Common;
 
-/// <summary>
-/// Test page classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Test page classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.PageObjects
 {
     /// <summary>
@@ -30,12 +30,36 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         private readonly IWebElement nextButton;
 #pragma warning restore 0649
 
+        /// <summary>
+        /// Create the initial CARFAX 'Cars For Sale' page object.
+        /// </summary>
+        /// <param name="driver">
+        /// Reference to a Selenium Web driver.
+        /// </param>
+        /// <param name="baseUrl">
+        /// The base URL of the Web application.
+        /// </param>
+        /// <param name="path">
+        /// The page path segment.
+        /// </param>
+        /// <param name="pageTimeout">
+        /// The maximum time to wait for the page to load.
+        /// </param>
+        /// <param name="elementTimeout">
+        /// The maximum time to wait for an element on the page to become available.
+        /// </param>
         public CarsForSale1Page(IWebDriver driver, string baseUrl, string path, TimeSpan pageTimeout, TimeSpan elementTimeout) :
             base(driver, TestUtils.AppendUrl(baseUrl, path), pageTimeout, elementTimeout)
 
         {
         }
 
+        /// <summary>
+        /// Select a car make.
+        /// </summary>
+        /// <param name="make">
+        /// The name of the make to select.
+        /// </param>
         public void Select_Make(string make)
         {
             var selector = new SelectElement(makeSelector);
@@ -49,6 +73,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             selector.SelectByValue(make);
         }
 
+        /// <summary>
+        /// Select a car model.
+        /// </summary>
+        /// <param name="model">
+        /// The name of the model to select.
+        /// </param>
         public void Select_Model(string model)
         {
             var selector = new SelectElement(modelSelector);
@@ -58,6 +88,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             selector.SelectByValue(model);
         }
 
+        /// <summary>
+        /// Type a zip code into the zip code input field.
+        /// </summary>
+        /// <param name="zip">
+        /// The zip code to type.
+        /// </param>
         public void Type_ZipCode(string zip)
         {
             SeleniumTestUtils.HighlightElement(driver, zipCodeInput);
@@ -71,6 +107,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             zipCodeInput.SendKeys(zip);
         }
 
+        /// <summary>
+        /// Click the page next button.
+        /// </summary>
+        /// <returns>
+        /// A reference to the next page object.
+        /// </returns>
         public Page Click_Next_Button()
         {
             SeleniumTestUtils.Click(driver, elementTimeout, nextButton);

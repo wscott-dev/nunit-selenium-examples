@@ -3,12 +3,12 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.ObjectModel;
 
-/// <summary>
-/// Common Selenium test verification utilities.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Common Selenium test verification utilities.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.Common
 {
     /// <summary>
@@ -20,13 +20,16 @@ namespace WS.Examples.Tests.Selenium.Common
         /// Verify the presence of a hyperlink element on a web page by matching text within the element.
         /// </summary>
         /// <param name="driver">
-        /// Reference to a Web driver.
+        /// Reference to a Selenium Web driver.
         /// </param>
         /// <param name="timeout">
-        /// Maximum amount of time to wait for the specified element to be found.
+        /// Maximum amount of time to wait for the specified element to become available.
         /// </param>
         /// <param name="title">
-        /// A text string.
+        /// The title to match.
+        /// </param>
+        /// <param name="text">
+        /// The text to match.
         /// </param>
         /// <param name="position">
         /// The position of the element on the page.

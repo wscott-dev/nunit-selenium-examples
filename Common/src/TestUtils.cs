@@ -1,11 +1,11 @@
 ﻿using System;
 
-/// <summary>
-/// Common test utilities.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Common test utilities.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Common
 {
     /// <summary>
@@ -17,7 +17,8 @@ namespace WS.Examples.Tests.Common
         /// Get the value for the specified environment variable name.
         /// </summary>
         /// <param name="varName">
-        /// An environment variable name.</param>
+        /// An environment variable name.
+        /// </param>
         /// <returns>
         /// A environment variable value.
         /// </returns>

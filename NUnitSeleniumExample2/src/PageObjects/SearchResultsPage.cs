@@ -4,12 +4,12 @@ using SeleniumExtras.PageObjects;
 using System;
 using WS.Examples.Tests.Selenium.Common;
 
-/// <summary>
-/// Test page classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Test page classes.
+//
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.PageObjects
 {
     /// <summary>
@@ -29,11 +29,32 @@ namespace WS.Examples.Tests.Selenium.PageObjects
         private readonly IWebElement zipCodeInput;
 #pragma warning restore 0649
 
+        /// <summary>
+        /// Create a CARFAX search results page object.
+        /// </summary>
+        /// <param name="driver">
+        /// Reference to a Selenium Web driver.
+        /// </param>
+        /// <param name="baseUrl">
+        /// The base URL of the Web application.
+        /// </param>
+        /// <param name="pageTimeout">
+        /// The maximum time to wait for the page to load.
+        /// </param>
+        /// <param name="elementTimeout">
+        /// The maximum time to wait for an element to become avialable.
+        /// </param>
         public SearchResultsPage(IWebDriver driver, string baseUrl, TimeSpan pageTimeout, TimeSpan elementTimeout) :
             base(driver, baseUrl, pageTimeout, elementTimeout)
         {
         }
 
+        /// <summary>
+        /// Get the page header text.
+        /// </summary>
+        /// <returns>
+        /// The page header text with leading and trailing whitespace removed.
+        /// </returns>
         public string GetHeaderText()
         {
             SeleniumTestUtils.WaitForPresenceOfElement(driver, elementTimeout, By.XPath("//h1"));
@@ -42,6 +63,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             return h1.Text.Trim();
         }
 
+        /// <summary>
+        /// Get the selected car make.
+        /// </summary>
+        /// <returns>
+        /// The name of a car make.
+        /// </returns>
         public string GetSelectedMake()
         {
             SeleniumTestUtils.WaitForPresenceOfElement(driver, elementTimeout, By.XPath("//select[@name='make']"));
@@ -51,6 +78,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             return selector.SelectedOption.Text.Trim();
         }
 
+        /// <summary>
+        /// Get the selected car model.
+        /// </summary>
+        /// <returns>
+        /// The name of a car model.
+        /// </returns>
         public string GetSelectedModel()
         {
             SeleniumTestUtils.WaitForPresenceOfElement(driver, elementTimeout, By.XPath("//select[@name='model']"));
@@ -60,6 +93,12 @@ namespace WS.Examples.Tests.Selenium.PageObjects
             return selector.SelectedOption.Text.Trim();
         }
 
+        /// <summary>
+        /// Get the zip code field value.
+        /// </summary>
+        /// <returns>
+        /// A zip code.
+        /// </returns>
         public string GetZipCode()
         {
             SeleniumTestUtils.WaitForPresenceOfElement(driver, elementTimeout, By.XPath("//input[@name='zip']"));

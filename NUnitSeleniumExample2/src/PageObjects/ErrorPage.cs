@@ -2,12 +2,12 @@
 using System;
 using WS.Examples.Tests.Common;
 
-/// <summary>
-/// Test page classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Test page classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.PageObjects
 {
     /// <summary>
@@ -15,8 +15,26 @@ namespace WS.Examples.Tests.Selenium.PageObjects
     /// </summary>
     public class ErrorPage : Page
     {
-        public ErrorPage(IWebDriver driver, string baseUrl, string pageSegment, TimeSpan pageTimeout, TimeSpan elementTimeout) :
-            base(driver, TestUtils.AppendUrl(baseUrl, pageSegment), pageTimeout, elementTimeout)
+        /// <summary>
+        /// Create a CARFAX error page object.
+        /// </summary>
+        /// <param name="driver">
+        /// Reference to a Selenium Web driver.
+        /// </param>
+        /// <param name="baseUrl">
+        /// The base URL of the Web application.
+        /// </param>
+        /// <param name="path">
+        /// The page path segment.
+        /// </param>
+        /// <param name="pageTimeout">
+        /// The maximum time to wait for the page to load.
+        /// </param>
+        /// <param name="elementTimeout">
+        /// The maximum time to wait for a page element to become available.
+        /// </param>
+        public ErrorPage(IWebDriver driver, string baseUrl, string path, TimeSpan pageTimeout, TimeSpan elementTimeout) :
+            base(driver, TestUtils.AppendUrl(baseUrl, path), pageTimeout, elementTimeout)
         {
         }
     }

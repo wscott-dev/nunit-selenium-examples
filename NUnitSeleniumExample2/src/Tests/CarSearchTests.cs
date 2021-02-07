@@ -5,12 +5,12 @@ using System.Threading;
 using WS.Examples.Tests.Selenium.Common;
 using WS.Examples.Tests.Selenium.PageObjects;
 
-/// <summary>
-/// CARFAX used car search tests.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// CARFAX used car search tests.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+// </summary>
 namespace WS.Examples.Tests.Selenium.CarSearchTests
 {
     [TestFixture]
@@ -20,6 +20,10 @@ namespace WS.Examples.Tests.Selenium.CarSearchTests
         HomePage homePage;
         CarsForSale1Page carsForSalePage;
 
+        /// <summary>
+        /// Initialize the CARFAX search test suite fixture.  Then navigate to the
+        /// Web application home page and click the 'Used Cars for Sale' menu item.
+        /// </summary>
         [OneTimeSetUp]
         public void Init()
         {
@@ -36,10 +40,10 @@ namespace WS.Examples.Tests.Selenium.CarSearchTests
         /// Verify that a CARFAX basic used car search returns the appropriate results page.
         /// </summary>
         /// <param name="make">
-        /// An automobile make.
+        /// A car make.
         /// </param>
         /// <param name="model">
-        /// A model of the specified automobile make.
+        /// A model of the specified car make.
         /// </param>
         /// <param name="zipCode">
         /// A search zip code.
@@ -94,6 +98,9 @@ namespace WS.Examples.Tests.Selenium.CarSearchTests
             }
         }
 
+        /// <summary>
+        /// Clean up resources associated with the test fixture.
+        /// </summary>
         [OneTimeTearDown]
         public void Cleanup()
         {

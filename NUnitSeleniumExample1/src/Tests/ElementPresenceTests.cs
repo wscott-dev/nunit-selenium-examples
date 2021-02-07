@@ -7,12 +7,12 @@ using System;
 using System.Threading;
 using WS.Examples.Tests.Selenium.Common;
 
-/// <summary>
-/// CARFAX element presence tests.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// CARFAX element presence tests.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.ElementPresenceTests
 {
     /// <summary>
@@ -23,6 +23,9 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
     [NonParallelizable]
     public partial class ElementPresenceTests : SeleniumTestFixture
     {
+        /// <summary>
+        /// Initialize the element presence test suite fixture.
+        /// </summary>
         [OneTimeSetUp]
         public void Init()
         {
@@ -184,6 +187,9 @@ namespace WS.Examples.Tests.Selenium.ElementPresenceTests
             }
         }
 
+        /// <summary>
+        /// Clean up resources associated with the test fixture.
+        /// </summary>
         [OneTimeTearDown]
         public void Cleanup()
         {

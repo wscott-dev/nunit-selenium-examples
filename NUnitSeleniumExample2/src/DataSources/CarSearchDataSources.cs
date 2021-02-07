@@ -5,18 +5,22 @@ using System.IO;
 using WS.Examples.Tests.Selenium.Common;
 using WS.Examples.Tests.Selenium.DataSourceClasses;
 
-/// <summary>
-/// Car search test data sources.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Car search test data sources.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Selenium.CarSearchTests
 {
     /// <summary>
+    /// CARFAX car search test data providers.
     /// </summary>
     public partial class CarSearchTests
     {
+        /// <summary>
+        /// Get car model test data from external JSON files.
+        /// </summary>
         public static IEnumerable<object[]> GetCarModelTestData()
         {
             IDictionary<string, CarData> carData;

@@ -1,11 +1,11 @@
 ﻿using System;
 
-/// <summary>
-/// Common test classes.
-/// 
-/// Subject: Software Developer Portfolio
-/// Author: Wesley Scott
-/// </summary>
+//
+// Common test classes.
+// 
+// Subject: Software Developer Portfolio
+// Author: Wesley Scott
+//
 namespace WS.Examples.Tests.Common
 {
     /// <summary>
@@ -14,6 +14,12 @@ namespace WS.Examples.Tests.Common
     [Serializable]
     public abstract class TestException : Exception
     {
+        /// <summary>
+        /// Create a test exception.
+        /// </summary>
+        /// <param name="message">
+        /// An exception message.
+        /// </param>
         public TestException(string message) : base(message)
         {
         }
